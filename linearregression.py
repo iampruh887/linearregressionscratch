@@ -1,12 +1,15 @@
 import numpy as np
 import math
+#function to find out index
 def findindex(List, val) -> int:
 	ctr = 0
 	for i in List:
 		if i == val:
 			return ctr
 		ctr+=1
-
+#data engineering stuff [ignore pls.. it will destroy you]
+#at the time of writing this code, only god and I knew what it meant, 
+#not only god knows what i did here.
 def readfile(filename) -> tuple:
 
 	"""
@@ -84,6 +87,7 @@ values= output[0]
 titles = output[1]
 print(titles)
 k = len(values)
+#dividing into training and testing data
 num = math.ceil(k*0.7)
 i = 0
 training = []
@@ -136,17 +140,7 @@ for i in range(epochs):
     prev_cost = J
     
 
-
-"""
-print(W)
-print(titles)
-pclass = np.float64(input("enter Pclass: "))
-age = np.float64(input("enter age"))
-fare = np.float64(input("enter fare"))
-X_hat = np.array([pclass, age, fare])
-f = np.dot(X_hat, W)
-print(f)
-"""
+#again some feature engineering and stuff, dont try to understand this plz
 X = np.array([])
 Klist = testing
 for i in Klist:
